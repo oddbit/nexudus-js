@@ -1,0 +1,28 @@
+
+language: node_js
+
+node_js:
+  - "node"
+
+cache:
+  - node_modules
+
+branches:
+  only:
+    - /^[0-9.]+$/
+
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > ~/.npmrc
+  - npm config set @oddbit:registry https://registry.npmjs.org/
+
+install:
+  - npm install -g typescript
+  - npm install
+
+before_script:
+  - npm run build
+  - ls dist
+  
+script:
+  - npm publish --access=public
+
