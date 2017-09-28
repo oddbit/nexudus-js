@@ -24,15 +24,15 @@ export class PublicApiClient {
         console.log("CREATED PublicApiClient: " + JSON.stringify(this, null, 2));
     }
 
-    getProfile(): Promise<nxTypes.ProfileResponse> {
+    getProfile(): Promise<nxTypes.Profile> {
         return this.request("GET", "/profile");
     }
 
-    getCoworker(): Promise<nxTypes.CoworkerResponse> {
+    getCoworker(): Promise<nxTypes.Coworker> {
         return this.request("GET", "/profile?_resource=Coworker");
     }
 
-    getUser(): Promise<nxTypes.UserResponse> {
+    getUser(): Promise<nxTypes.User> {
         return this.request("GET", "/profile?_resource=User");
     }
 

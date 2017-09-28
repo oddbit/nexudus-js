@@ -1,20 +1,3 @@
-import {NexudusApiResponse} from "./response";
-
-export interface ProfileResponse extends NexudusApiResponse {
-    Value: {
-        User: User,
-        Coworker: Coworker
-    }     
-}
-
-export interface CoworkerResponse extends NexudusApiResponse {
-    Value: Coworker
-}
-
-export interface UserResponse extends NexudusApiResponse {
-    Value: User
-}
-
 export interface Coworker {
     FullName: string,
     GuessedFirstNameForInvoice: string,
@@ -152,3 +135,8 @@ export interface User {
     UniqueId: string,
     IsNull: boolean
   }
+
+export interface Profile {
+    User: User,
+    Coworker: Coworker
+}

@@ -1,5 +1,3 @@
-
-
 export interface Invoice {
     Coworker: any,
     Business: any,
