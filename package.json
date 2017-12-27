@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/oddbit/nexudus-js#readme",
   "devDependencies": {
+    "@types/bluebird": "^3.5.19",
     "@types/crypto-js": "^3.1.38",
     "@types/lodash": "^4.14.91",
     "@types/request-promise": "^4.1.38",
@@ -32,6 +33,7 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "crypto-js": "^3.1.9-1",
     "lodash": "^4.17.4",
     "request": "^2.82.0",
