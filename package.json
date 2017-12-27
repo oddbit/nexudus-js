@@ -1,6 +1,6 @@
 {
   "name": "@oddbit/nexudus",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Nexudus API client",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
