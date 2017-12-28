@@ -11,10 +11,10 @@ export class AppInstallationRequest {
     constructor(requestQuery: any) {
         this.applicationKey = requestQuery.a;
         this.token = requestQuery.t;
-        this.requestTime = requestQuery.query.d;
-        this.validationHash = requestQuery.query.h;
-        this.subdomain = requestQuery.query.b;
-        this.email = requestQuery.query.e;
+        this.requestTime = requestQuery.d;
+        this.validationHash = requestQuery.h;
+        this.subdomain = requestQuery.b;
+        this.email = requestQuery.e;
     }
 }
 
