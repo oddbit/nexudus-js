@@ -163,7 +163,6 @@ export class AdminApiClient {
                 hasMorePages = response.HasNextPage;
                 for (const record of response.Records) {
                     responseData.push(record);
-                    console.log(`Accumulated responseData.length=${responseData.length}`);
                 }
             } catch (error) {
                 return AdminApiClient.handleError(error)
