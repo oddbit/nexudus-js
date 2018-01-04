@@ -2,6 +2,7 @@
 ![License](https://img.shields.io/npm/l/@oddbit/nexudus.svg)
 ![NPM version](https://img.shields.io/npm/v/@oddbit/nexudus.svg)
 ![Total NPM downloads](https://img.shields.io/npm/dt/@oddbit/nexudus.svg)
+[![Travis build status](https://img.shields.io/travis/oddbit/nexudus-js.svg)](https://travis-ci.org/oddbit/nexudus-js)
 
 An easy to use and Typscript friendly API client for Nexudus.
 
