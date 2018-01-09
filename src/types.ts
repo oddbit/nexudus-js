@@ -1,5 +1,3 @@
-
-
 /**
  * Representing the data transfer object that is being returned from Nexudus API
  */
@@ -278,3 +276,109 @@ export interface WebHook {
     ToStringText: string,
     LocalizationDetails?: any
 }
+
+export interface Invoice {
+    Coworker: any,
+    Business: any,
+    InvoiceNumber: number,
+    PaymentReference: number,
+    BillToName: string,
+    BillToAddress: string,
+    BillToCity: string,
+    BillToPostCode: string,
+    BillToPhone?: any,
+    BillToFax?: any,
+    BillToTaxIDNumber?: any,
+    TaxIDNumber?: any,
+    CustomData?: any,
+    BillToCountry: any,
+    Description: string,
+    PurchaseOrder: string,
+    DiscountAmount: number,
+    DueDate: string,
+    InvoiceFromDate: string,
+    InvoiceToDate: string,
+    TotalAmount: number,
+    TransactionTotalAmount: number,
+    TransactionCurrency: any,
+    CreatedOn: string,
+    Currency: any,
+    TaxAmount: number,
+    Paid: boolean,
+    Draft: boolean,
+    PaidOn: string,
+    Lines: any[],
+    LinesPaged: any[][],
+    Payments: any[],
+    TaxCategories: any[],
+    TotalFormated: string,
+    TaxAmountFormated: string,
+    DiscountAmountFormated: string,
+    TransactionTotalAmountFormatted: string,
+    ForteSignature?: any,
+    EpaySingature?: any,
+    PeachPaymentsSignature?: any,
+    Id: number,
+    IdString: number,
+    UpdatedOn: string,
+    UniqueId: string,
+    IsNull: boolean,
+}
+
+export interface InvoiceData {
+    Years: number[],
+    Invoices: Invoice[],
+    ThisSpaceInvoices: Invoice[],
+    UnPaidInvoices: Invoice[],
+    ThisSpaceUnPaidInvoices: Invoice[],
+    TotalUnpaidAmount: number,
+    TotalUnpaidAmountFormmatted: number,
+    HasUnpaidInvoices: boolean,
+    PayPalEnabled: boolean,
+    StripeEnabled: boolean,
+    StripePublicKey: string,
+    USAEPayEnabled: boolean,
+    AdyenEnabled: boolean,
+    CanPrintInvoices: boolean,
+    SpreedlyEnvironmentKey: string,
+    SpreedlyEnabled: boolean,
+    MultiGatewayEnabled: boolean,
+    CurrentBalance: number,
+    UtcTimeTicks: number,
+    ForteEnabled: boolean,
+    ForteCCEnable: boolean,
+    ForteECheckEnabled: boolean,
+    ForteApiLoginId?: any,
+    EpayEnabled: boolean,
+    EPayMerchant: string,
+    BraintreeEnabled: boolean,
+    BraintreeClientToken?: any,
+    BraintreePublicKey: string,
+    MidtransEnabled: boolean,
+    MidtransClientKey: string,
+    PeachPaymentsEnabled: boolean,
+    KeepNewAccountsOnHold: boolean
+}
+export interface User {
+    FullName: string,
+    Email: string,
+    OnHelpDeskMsg: boolean,
+    OnNewWallPost: boolean,
+    OnNewBlogComment: boolean,
+    OnNewEventComment: boolean,
+    ReceiveCommunityDigest: boolean,
+    ReceiveEveryMessage: boolean,
+    IsAuthenticated: boolean,
+    Id: number,
+    IdString: string,
+    UpdatedOn: string,
+    CreatedOn: string,
+    UniqueId: string,
+    IsNull: boolean
+  }
+
+export interface Profile {
+    User: User,
+    Coworker: Coworker
+}
+    

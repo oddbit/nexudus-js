@@ -1,9 +1,8 @@
 import {CookieJar, Cookie} from "request";
 import * as rp from "request-promise";
 import * as tough from "tough-cookie";
-import * as types from "./types";
+import * as types from "../types";
 import * as utils from "../utils";
-import { WebHook } from "../index";
 
 /**
 * Generic JSON structure for a Nexudus API response
@@ -138,7 +137,7 @@ export class AdminApiClient {
         return this.getList(Object.assign(opts, WEBHOOK_QUERY_OPTS)) as Promise<types.WebHook[]>;
     }
 
-    saveWebHook(data: WebHook) {
+    saveWebHook(data: types.WebHook) {
         return this.save(data, WEBHOOK_QUERY_OPTS);
     }
 
