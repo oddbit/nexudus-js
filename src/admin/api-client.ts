@@ -129,6 +129,10 @@ export class AdminApiClient {
         return this.getList(Object.assign(opts, CHECKIN_QUERY_OPTS)) as Promise<types.CheckIn[]>;
     }
 
+    saveCheckIn(data: types.CheckIn) {
+        return this.save(data, CHECKIN_QUERY_OPTS);
+    }
+    
     getWebHook(id: number) {
         return this.get(id, WEBHOOK_QUERY_OPTS) as Promise<types.WebHook>;
     }
