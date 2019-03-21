@@ -3,12 +3,6 @@ import * as rp from "request-promise";
 import * as tough from "tough-cookie";
 import * as nxTypes from "../types";
 
-
-export interface ClientOpts {
-    email?: string,
-    password?: string 
-}
-
 export class PublicApiClient {
 
     private _cookieJar: CookieJar;
@@ -19,7 +13,7 @@ export class PublicApiClient {
         this._cookieJar = rp.jar();
 
         this._spaceUrl = `https://${spaceName}.spaces.nexudus.com/en`;
-        this._credentials = new Buffer(`${email}:${password}`).toString("base64");;
+        this._credentials = new Buffer(`${email}:${password}`).toString("base64");
 
         console.log("CREATED PublicApiClient: " + JSON.stringify(this, null, 2));
     }
@@ -42,7 +36,7 @@ export class PublicApiClient {
 
     // ------------------------------------------------------------------------
 
-    private async request(method: string, uri:string, body?: any) {
+    private async request(method: string, uri: string, body?: any) {
         const opts = {
             method: method,
             uri: this._spaceUrl + uri,
